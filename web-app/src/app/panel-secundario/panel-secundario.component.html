@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="content">
+    <div class="top-bar-wrapper">
+      <div class="top-bar">
+        <span class="welcome-text">Bienvenido: {{ username }}</span>
+        <button class="menu-button" (click)="toggleMenu()">{{ initialUser }}</button>
+      </div>
+    </div>
+    <div class="remaining-space">
+      <div class="card-container">
+        <div class="card-grid">
+          <div class="menu" *ngIf="menuOpen">
+            <div class="menu-content">
+              <a (click)="logout()">Cerrar sesión</a>
+            </div>
+          </div>
+          <div *ngIf="currentRoute === 'roles'">
+           
+            <div class="card-grid">
+              <div class="card-item card-seguridad">
+                <input type="radio" name="card" />
+                <div class="icon"></div>
+                <div class="badge">19</div> <!-- Badge pegado al borde -->
+                <span>Administrador</span>
+              </div>
+            
+              <div class="card-item card-cuentas">
+                <input type="radio" name="card" />
+                <div class="icon"></div>
+                <div class="badge">5</div> <!-- Badge pegado al borde -->
+                <span>Usuario</span>
+              </div>
+            
+              <div class="card-item card-roles">
+                <input type="radio" name="card" />
+                <div class="icon"></div>
+                <div class="badge">7</div> <!-- Badge pegado al borde -->
+                <span>Invitado</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div *ngIf="currentRoute === '/panel/seguridad'">
+        <p>Contenido relacionado con Seguridad</p>
+      </div>
+      <div *ngIf="currentRoute === '/panel/cuentas'">
+        <p>Contenido relacionado con Gestión de Cuentas</p>
+      </div>
+    </div>
+  </div>
+</div>

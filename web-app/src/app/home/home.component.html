@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="content">
+    <div class="top-bar-wrapper">
+      <div class="top-bar">
+        <span class="welcome-text">Bienvenido: {{ username }}</span>
+        <button class="menu-button" (click)="toggleMenu()">{{ initialUser }}</button>
+      </div>
+    </div>
+    <div class="remaining-space">
+      <div class="card-container">
+        <div class="card-grid">
+          <div class="menu" *ngIf="menuOpen">
+            <div class="menu-content">
+              <a (click)="logout()">Cerrar sesión</a>
+            </div>
+          </div>
+          <div class="card-item card-seguridad ">
+            <div class="card">
+              <span>Seguridad</span>
+              <i class="icon"></i>
+            </div>
+            <input type="radio" name="card" (click)="navigateToPanel('/panel/seguridad')" />
+          </div>
+
+          <div class="card-item card-cuentas">
+            <div class="card">
+              <span>Gestión de cuentas</span>
+              <i class="icon"></i>
+            </div>
+            <input type="radio" name="card" (click)="navigateToPanel('/panel/cuentas')" />
+          </div>
+
+          <div class="card-item">
+            <div class="card card-roles">
+              <span>Configuración de roles y permisos</span>
+              <i class="icon"></i>
+            </div>
+            <input type="radio" name="card" (click)="navigateToPanel('/panel/roles')" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
