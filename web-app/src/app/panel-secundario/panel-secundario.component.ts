@@ -42,4 +42,8 @@ export class PanelSecundarioComponent {
   navigateToPanel(route: string) {
     this.router.navigate([route]);
   }
+  navigateToHome(){
+    this.router.navigate(['/home']); 
+  }
+
 }

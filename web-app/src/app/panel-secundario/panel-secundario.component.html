@@ -14,40 +14,91 @@
               <a (click)="logout()">Cerrar sesión</a>
             </div>
           </div>
-          <div *ngIf="currentRoute === 'roles'">
-           
+          <!-- Roles y permisos -->
+          <div *ngIf="currentRoute === 'roles'"> 
             <div class="card-grid">
               <div class="card-item card-seguridad">
                 <input type="radio" name="card" />
                 <div class="icon"></div>
-                <div class="badge">19</div> <!-- Badge pegado al borde -->
+                <div class="badge">19</div> 
                 <span>Administrador</span>
               </div>
             
               <div class="card-item card-cuentas">
                 <input type="radio" name="card" />
                 <div class="icon"></div>
-                <div class="badge">5</div> <!-- Badge pegado al borde -->
+                <div class="badge">5</div> 
                 <span>Usuario</span>
               </div>
             
               <div class="card-item card-roles">
                 <input type="radio" name="card" />
                 <div class="icon"></div>
-                <div class="badge">7</div> <!-- Badge pegado al borde -->
+                <div class="badge">7</div> 
                 <span>Invitado</span>
               </div>
             </div>
-
+            <div class="button-container">
+              <button mat-button class="login-button" (click)="navigateToHome()">Cancelar</button>
+            </div>
           </div>
+          <!-- Seguridad -->
+          <div *ngIf="currentRoute === 'seguridad'">
+            <div class="card-grid">
+              <div class="card-item card-huella">
+                <input type="radio" name="card" />
+                <div class="icon"></div>
+                <div class="badge">19</div> 
+                <span>Huella digital</span>
+              </div>
+              
+              <div class="card-item card-cuenta">
+                <input type="radio" name="card" />
+                <div class="icon"></div>
+                <div class="badge">5</div> 
+                <span>Activar cuentas</span>
+              </div>
+              
+              <div class="card-item card-contrasena">
+                <input type="radio" name="card" />
+                <div class="icon"></div>
+                <div class="badge">7</div> 
+                <span>Usuario y contraseña</span>
+              </div>
+            </div>
+            <div class="button-container">
+              <button mat-button class="login-button" (click)="navigateToHome()">Cancelar</button>
+            </div>
+          </div>
+          <!-- Activar cuentas -->  
+          <div *ngIf="currentRoute === 'cuentas'">
+            <div class="card-grid">
+              <div class="card-item-gestion card-desbloqueo">
+                <div class="card">
+                  <i class="icon"></i>
+                  <div class="badge">12</div> 
+                  <span>Desbloqueo de cuentas</span>
+                </div>
+                <input type="radio" name="card" (click)="navigateToPanel('/panel/seguridad')" />
+              </div>
+    
+              <div class="card-item-gestion card-contrasena-vencida">
+                <div class="card">
+                  <i class="icon"></i>
+                  <div class="badge">8</div> 
+                  <span>Contraseña vencida</span>
+                </div>
+                <input type="radio" name="card" (click)="navigateToPanel('/panel/cuentas')" />
+              </div>
+            </div>
+            <div class="button-container">
+              <button mat-button class="login-button" (click)="navigateToHome()">Cancelar</button>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div *ngIf="currentRoute === '/panel/seguridad'">
-        <p>Contenido relacionado con Seguridad</p>
-      </div>
-      <div *ngIf="currentRoute === '/panel/cuentas'">
-        <p>Contenido relacionado con Gestión de Cuentas</p>
-      </div>
+     
     </div>
   </div>
 </div>

@@ -138,6 +138,7 @@
 }
 
 /* Especificar los iconos por tarjeta */
+
 .card-seguridad .icon {
   background-image: url('../assets/iconos/security.png');
   background-size: contain;

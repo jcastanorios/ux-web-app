@@ -70,6 +70,7 @@
 
 /* Nueva grilla */
 .card-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   grid-template-rows: repeat(2, auto); /* 2 filas */
@@ -128,7 +129,7 @@
   background-image: url('../assets/iconos/roleinvitado.png');
 }
 
-/* Badge */
+
 .badge {
   position: absolute;
   bottom: 33px;  
@@ -146,7 +147,6 @@
   color: white;
 }
 
-/* Posición específica en la grilla */
 .card-seguridad {
   grid-column: 1;
   grid-row: 1;
@@ -158,9 +158,9 @@
 }
 
 .card-roles {
-  grid-column: span 2; /* Ocupa las 2 columnas */
+  grid-column: span 2; 
   grid-row: 2;
-  justify-self: center; /* Centrar en la grilla */
+  justify-self: center; 
 }
 
 .menu {
@@ -200,3 +200,100 @@
   font-size: 20px;
   font-weight: 400;
 }
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.login-button {
+  color: white !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  background-color: #0E89CB;
+  width: 150px;
+  height: 50px !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.card-huella .icon {
+  background-image: url('../assets/iconos/huella.png');
+}
+
+.card-cuenta .icon {
+  background-image: url('../assets/iconos/cuenta.png');
+}
+
+.card-contrasena .icon {
+  background-image: url('../assets/iconos/contrasena.png');
+}
+
+
+
+.card-huella {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-cuenta {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card-contrasena {
+  grid-column: span 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+
+/*gestión de cuentas*/
+
+.card-item-gestion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  background: #E9ECEF;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 355px;
+  height: 61px;
+}
+
+.card-desbloqueo{
+  grid-column: span 2; 
+  grid-row: 2;
+}
+
+.card-contrasena-vencida {
+  grid-column: span 2;
+  grid-row: 2;
+}
+
+.card-desbloqueo .icon {
+  background-image: url('../assets/iconos/desbloqueo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+}
+
+.card-contrasena-vencida .icon {
+  background-image: url('../assets/iconos/contrasenavencida.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+}
+
+
