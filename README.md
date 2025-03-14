@@ -3,7 +3,7 @@
 Este es un proyecto creado con Angular. Este repositorio contiene la estructura básica de la aplicación web.
 
 Estructura
-/Users/jucastano/ux-web-app/web-app/src
+/web-app/src
 ├── app
 │   ├── assets
 │   ├── dialog
