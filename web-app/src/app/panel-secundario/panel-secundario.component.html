@@ -8,33 +8,33 @@
     </div>
     <div class="remaining-space">
       <div class="card-container">
-        <div class="card-grid">
-          <div class="menu" *ngIf="menuOpen">
-            <div class="menu-content">
-              <a (click)="logout()">Cerrar sesión</a>
-            </div>
+        <div class="menu" *ngIf="menuOpen">
+          <div class="menu-content">
+            <a (click)="logout()">Cerrar sesión</a>
           </div>
+        </div>
+        <div class="card-grid">
           <!-- Roles y permisos -->
-          <div *ngIf="currentRoute === 'roles'"> 
+          <div *ngIf="currentRoute === 'roles'">
             <div class="card-grid">
               <div class="card-item card-seguridad">
-                <input type="radio" name="card" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-role/admin')" />
                 <div class="icon"></div>
-                <div class="badge">19</div> 
+                <div class="badge">19</div>
                 <span>Administrador</span>
               </div>
-            
+
               <div class="card-item card-cuentas">
-                <input type="radio" name="card" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-role/usuario')" />
                 <div class="icon"></div>
-                <div class="badge">5</div> 
+                <div class="badge">5</div>
                 <span>Usuario</span>
               </div>
-            
+
               <div class="card-item card-roles">
-                <input type="radio" name="card" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-role/invitado')" />
                 <div class="icon"></div>
-                <div class="badge">7</div> 
+                <div class="badge">7</div>
                 <span>Invitado</span>
               </div>
             </div>
@@ -46,23 +46,23 @@
           <div *ngIf="currentRoute === 'seguridad'">
             <div class="card-grid">
               <div class="card-item card-huella">
-                <input type="radio" name="card" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-met-aut/huella')" />
                 <div class="icon"></div>
-                <div class="badge">19</div> 
+                <div class="badge">19</div>
                 <span>Huella digital</span>
               </div>
-              
+
               <div class="card-item card-cuenta">
-                <input type="radio" name="card" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-act-cta/activar-cuenta')" />
                 <div class="icon"></div>
-                <div class="badge">5</div> 
+                <div class="badge">5</div>
                 <span>Activar cuentas</span>
               </div>
-              
+
               <div class="card-item card-contrasena">
-                <input type="radio" name="card" />
+                <input type="radio" name="card" (click)="navigateToPanel('lista-act-cta/huella')" />
                 <div class="icon"></div>
-                <div class="badge">7</div> 
+                <div class="badge">7</div>
                 <span>Usuario y contraseña</span>
               </div>
             </div>
@@ -70,35 +70,37 @@
               <button mat-button class="login-button" (click)="navigateToHome()">Cancelar</button>
             </div>
           </div>
-          <!-- Activar cuentas -->  
+          <!-- Activar cuentas -->
           <div *ngIf="currentRoute === 'cuentas'">
             <div class="card-grid">
               <div class="card-item-gestion card-desbloqueo">
                 <div class="card">
                   <i class="icon"></i>
-                  <div class="badge">12</div> 
-                  <span>Desbloqueo de cuentas</span>
+                  <div class="badge">12</div>
                 </div>
-                <input type="radio" name="card" (click)="navigateToPanel('/panel/seguridad')" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-admin/desbloqueo')" />
               </div>
-    
+
               <div class="card-item-gestion card-contrasena-vencida">
                 <div class="card">
                   <i class="icon"></i>
-                  <div class="badge">8</div> 
-                  <span>Contraseña vencida</span>
+                  <div class="badge">8</div>
                 </div>
-                <input type="radio" name="card" (click)="navigateToPanel('/panel/cuentas')" />
+                <input type="radio" name="card" (click)="navigateToPanel('/lista-admin/pass-vencido')" />
               </div>
             </div>
-            <div class="button-container">
+            <div class="container-txt">
+
+              <div class="card-item-gestion-txt"><span>Desbloqueo de cuentas</span></div>
+              <div class="card-item-gestion-txt"><span>Contraseña vencida</span></div>
+            </div>
+            <div class="button-container-cuentas">
               <button mat-button class="login-button" (click)="navigateToHome()">Cancelar</button>
             </div>
           </div>
-
         </div>
       </div>
-     
+
     </div>
   </div>
 </div>

@@ -1,0 +1,52 @@
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+    margin-top: 57px;
+  }
+  
+  .button-container > button {
+    margin-left: 12px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: white !important;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    background-color: #0E89CB;
+    width: 140px;
+    height: 30px !important;
+    border: none;
+    border-radius: 5px; 
+        cursor: pointer;
+  }
+  
+  mat-dialog-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+
+  mat-icon {
+    color: #FFC300;
+    margin-right: 10px;
+    align-self: center;
+    width: 120px;
+    height: 120px;
+    font-size: 72px;
+  }
+
+  .mat-mdc-dialog-inner-container {
+    background-color: #E9ECEF; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+    margin-top: 500px;
+  }
+
+
+  .mat-mdc-dialog-surface {
+    background-color: #E9ECEF; 
+    border-radius: 8px; 
+  }

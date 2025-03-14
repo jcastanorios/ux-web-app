@@ -1,0 +1,9 @@
+<div style="display: flex; align-items: center; margin-top: 47px; margin-bottom: 2px;">
+  <p style="flex: 1;margin-left: 19px;font-size: 19px;margin-top: 51px;">{{ dialogText }}</p>
+  <mat-icon style="border-radius: 15px; color: #FFC300; font-size: 72px; margin-right: -19px; align-self: center; width: 108px; height: 78px;">warning</mat-icon>
+</div>
+
+<div class="button-container">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button (click)="navigateToPanel(routeToNavigate)">Actualizar</button>
+</div>

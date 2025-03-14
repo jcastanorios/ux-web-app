@@ -176,7 +176,7 @@
   justify-content: flex-end;
   border-radius: 10px;
   padding: 10px;
-  margin-right: 183px;
+  margin-right: 89px;
   z-index: 10000;
 }
 
@@ -295,5 +295,74 @@
   background-repeat: no-repeat;
   mix-blend-mode: multiply;
 }
+
+.card-item-gestion {
+  position: relative;
+}
+
+.card-item-gestion .badge {
+  position: absolute;
+  top:41px;
+  right: 48px; 
+  background-color: #15A3EF;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-item-gestion span {
+  position: absolute;
+  bottom: 1px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333; 
+}
+
+.button-container-cuentas {
+
+  position: relative;
+  bottom: -107px;
+  right: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-item-gestion-txt {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  width:100%; /* Asegura que ocupe el 100% del ancho del contenedor */
+  padding: 0 20px; /* Ajusta el espacio horizontal */
+  margin-top: 10px; /* Espacio entre el card y los textos */
+}
+
+.card-item-gestion-txt span {
+  text-align: center; /* Asegura que el texto esté centrado dentro del div */
+}
+.container-txt{
+  display: flex;
+}
+
+
+
+
+
+
+
+
 
 

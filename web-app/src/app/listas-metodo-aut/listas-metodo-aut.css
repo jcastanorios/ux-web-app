@@ -6,7 +6,7 @@
 
 .content {
   width: 1100px;
-  height: 500px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -53,14 +53,6 @@
   font-size: 22px;
 }
 
-.remaining-space {
-  flex: 1;
-  background: #F8F9FA;
-  width: 1100px;
-  display: flex;
-  align-items: center;
-}
-
 .card-container {
   width: 100%;
   display: flex;
@@ -68,31 +60,7 @@
   align-items: center;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 53px;
-  width: 1000px;
-}
 
-.card-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.card {
-  background: #E9ECEF;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 355px;
-  height: 61px;
-}
 
 .menu {
   position: absolute;
@@ -123,44 +91,92 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
-}
-
-.menu a {
   cursor: pointer;
 }
 
-.icon {
-  mix-blend-mode: multiply;
-  width: 60px;
-  height: 60px;
+/* Nueva tabla simple */
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Especificar los iconos por tarjeta */
-
-.card-seguridad .icon {
-  background-image: url('../assets/iconos/security.png');
-  background-size: contain;
-  background-repeat: no-repeat
+.simple-table th,
+.simple-table td {
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #ccc;
+  border-color: white;
 }
 
-.card-cuentas .icon {
-  background-image: url('../assets/iconos/user.png');
-  background-size: contain;
-  background-repeat: no-repeat
+.simple-table th {
+  background-color: #08527A;
+  color: white;
+  font-weight: bold;
 }
 
-.card-roles .icon {
-  background-image: url('../assets/iconos/gear.png');
-  background-size: contain;
-  background-repeat: no-repeat
+.simple-table tr:nth-child(even) {
+  background-color: #B7E3FA;
 }
 
-.card-cuentas:nth-child(2) {
-  margin-left: 93px;
+.simple-table tr:nth-child(odd) {
+  background-color: #8FD3F7;
 }
 
-.card span {
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
   font-family: 'Nunito', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
+  border-radius: 8px;
 }
+
+table {
+  border-spacing: 10px;
+}
+
+.remaining-space {
+  flex: 1;
+  background: #F8F9FA;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.button-container>button {
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white !important;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  background-color: #0E89CB;
+  width: 150px;
+  height: 40px !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-select {
+  font-family: 'Nunito', sans-serif; 
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  display: block;
+}
+
+.custom-select option {
+  text-align: center;
+}
+

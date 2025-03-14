@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="content">
+        <div class="top-bar-wrapper">
+            <div class="top-bar">
+                <span class="welcome-text">Bienvenido: {{ username }}</span>
+                <button class="menu-button" (click)="toggleMenu()">{{ initialUser }}</button>
+            </div>
+        </div>
+        <div class="remaining-space">
+            <div class="card-container">
+                <div class="menu" *ngIf="menuOpen">
+                    <div class="menu-content">
+                        <a (click)="logout()">Cerrar sesión</a>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="simple-table">
+                        <thead>
+                            <tr>
+                                <th>Identificador</th>
+                                <th>Nombre de usuario</th>
+                                <th>Cuentas</th>
+                                <th>Método de autenticación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let element of dataSource"
+                                [ngStyle]="{ 'background-color': getRowColor(element) }">
+                                <td>{{ element.id }}</td>
+                                <td>{{ element.username }}</td>
+                                <td>{{ element.account }}</td>
+                                <td>
+                                    <select [(ngModel)]="element.selected" class="custom-select">
+                                        <option [ngValue]="true">Usuario y contraseña</option>
+                                        <option [ngValue]="false">Huella digital</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="button-container">
+            <button mat-button (click)="navigateToPanel('/panel/seguridad')">Cancelar</button>
+            <button mat-button (click)="openConfirmDialog()">Actualizar</button>
+        </div>
+
+    </div>
+</div>
