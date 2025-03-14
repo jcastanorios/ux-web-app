@@ -35,6 +35,15 @@
   gap: 10px;
 }
 
+.site-title { 
+  font-size: 18px;
+  color: white;
+  padding-left: 20px;
+  flex-grow: 1;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+}
+
 .welcome-text {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
@@ -129,12 +138,9 @@
   display: flex;
   justify-content: center;
   font-family: 'Nunito', sans-serif;
-  border-radius: 8px;
 }
 
-table {
-  border-spacing: 10px;
-}
+
 
 .remaining-space {
   flex: 1;
@@ -180,4 +186,16 @@ table {
 .custom-select option {
   text-align: center;
 }
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+table td, table th {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+
 

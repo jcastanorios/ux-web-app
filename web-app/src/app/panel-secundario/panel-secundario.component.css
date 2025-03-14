@@ -35,6 +35,15 @@
   gap: 10px;
 }
 
+.site-title { 
+  font-size: 18px;
+  color: white;
+  padding-left: 20px;
+  flex-grow: 1;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+}
+
 .welcome-text {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;

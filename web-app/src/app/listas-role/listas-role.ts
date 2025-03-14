@@ -73,7 +73,7 @@ export class ListasRoleComponent {
   }
 
   openConfirmDialog(): void {
-    const dialogText = '¿Está seguro de actualizar los roles de usuario';
+    const dialogText = '¿Está seguro de actualizar los roles de usuario?';
     const path       = 'panel/roles';
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       width: '440px',

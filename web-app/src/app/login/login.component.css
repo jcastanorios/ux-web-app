@@ -1,16 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Apilar la barra superior y el login */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.top-bar-wrapper {
+  width: 966px; /* Asegurarse de que el ancho sea igual al de .login-container */
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #0B6DA2;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+  margin-bottom: -1px; /* Pegar más a la parte superior del contenedor del login */
+}
+
+.top-bar {
+  width: 100%;
+  height: 62px;
+  background: #0B6DA2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Asegurar que el título esté alineado a la izquierda */
+  position: relative;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.site-title { 
+  font-size: 18px;
+  color: white;
+  padding-left: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
 .login-container {
-  width: 966px;
+  width: 966px; /* Asegurarse de que el ancho sea igual al de .top-bar-wrapper */
   height: 520px;
   background: url('../assets/images/background.png') no-repeat center center;
   background-size: cover;
   display: flex;
-  border-radius: 10px;
-  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  border-bottom-left-radius: 10px; /* Bordes inferiores redondeados */
+  border-bottom-right-radius: 10px; /* Bordes inferiores redondeados */
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2); /* Añadir la misma sombra */
+  position: relative;
+  justify-content: space-between;
 }
 
 .left-side {
@@ -55,8 +93,6 @@
 .login-button:hover {
   background-color: #0c75a8;
 }
-
-
 
 mat-error {
   color: #FF7B00 !important;

@@ -2,6 +2,7 @@
     <div class="content">
         <div class="top-bar-wrapper">
             <div class="top-bar">
+                <span class="site-title">Administración de seguridad</span> <!-- Título añadido -->
                 <span class="welcome-text">Bienvenido: {{ username }}</span>
                 <button class="menu-button" (click)="toggleMenu()">{{ initialUser }}</button>
             </div>
@@ -33,7 +34,7 @@
                                 <td>{{ element.username }}</td>
                                 <td>{{ element.user }}</td>
                                 <td>{{ element.email }}</td>
-                                <td>{{ element.method }}</td>                                
+                                <td>{{ element.method }}</td>
                                 <td>
                                     <input type="checkbox" [(ngModel)]="element.selected">
                                 </td>
@@ -48,6 +49,6 @@
             <button mat-button (click)="navigateToPanel('/panel/seguridad')">Cancelar</button>
             <button mat-button (click)="openConfirmDialog()">Actualizar</button>
         </div>
-        
+
     </div>
 </div>
