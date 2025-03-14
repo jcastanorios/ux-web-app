@@ -12,4 +12,4 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 1. Clona este repositorio a tu máquina local:
 
    ```bash
-   git clone https://github.com/usuario/nombre-del-repositorio.git
+   git clone https://github.com/jcastanorios/ux-web-app.git
