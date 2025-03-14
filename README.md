@@ -2,6 +2,20 @@
 
 Este es un proyecto creado con Angular. Este repositorio contiene la estructura básica de la aplicación web.
 
+Estructura
+/Users/jucastano/ux-web-app/web-app/src
+├── app
+│   ├── assets
+│   ├── dialog
+│   ├── home
+│   ├── listas-activacion-cta
+│   ├── listas-admin
+│   ├── listas-metodo-aut
+│   ├── listas-role
+│   ├── login
+│   └── panel-secundario
+
+
 Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 
 - [Node.js](https://nodejs.org/) (recomendado: LTS)
