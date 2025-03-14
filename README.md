@@ -2,7 +2,9 @@
 
 Este es un proyecto creado con Angular. Este repositorio contiene la estructura básica de la aplicación web.
 
-Estructura
+
+## Estructura
+```plaintext
 /web-app/src
 ├── app
 │   ├── assets
@@ -14,6 +16,7 @@ Estructura
 │   ├── listas-role
 │   ├── login
 │   └── panel-secundario
+
 
 
 Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
